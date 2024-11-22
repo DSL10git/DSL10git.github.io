@@ -277,7 +277,7 @@ section {
 }
 
 .about-containers,
-.about-details-containers {
+.about-details-container {
     display: flex;
  }
 
@@ -351,5 +351,4 @@ article {
 
 article .icon {
     cursor: default;
-
 }
