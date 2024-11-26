@@ -1,4 +1,4 @@
-/* GENRAL */
+/* GENERAL */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 
@@ -19,14 +19,17 @@ p {
     color: rgb(85, 85, 85);
 }
 
-/*  TRANSITION */
+/* TRANSITION */
 
-a, .btn{
+a,
+.btn {
     transition: all 300ms ease;
 }
 
 /* DESKTOP NAV */
-nav, .nav-links {
+
+nav,
+.nav-links {
     display: flex;
 }
 
@@ -59,7 +62,7 @@ a:hover {
 }
 
 .logo:hover {
-    cursor:default;
+    cursor: default;
 }
 
 /* HAMBURGER MENU */
@@ -85,7 +88,7 @@ a:hover {
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: black;
     transition: all 0.3 ease-in-out;
 }
 
@@ -110,9 +113,10 @@ a:hover {
     transition: all 0.3 ease-in-out;
 }
 
-.menu-links li{
+.menu-links li {
     list-style: none;
 }
+
 .menu-links.open {
     max-height: 300px;
 }
@@ -120,9 +124,11 @@ a:hover {
 .hamburger-icon.open span:first-child {
     transform: rotate(45deg) translate(10px, 5px);
 }
+
 .hamburger-icon.open span:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger-icon.open span:last-child {
     transform: rotate(-45deg) translate(10px, -5px);
 }
@@ -139,8 +145,8 @@ a:hover {
     transform: none;
 }
 
-
 /* SECTIONS */
+
 section {
     padding-top: 4vh;
     height: 96vh;
@@ -170,8 +176,7 @@ section {
 }
 
 .section__pic-container img {
-    width: 400px;
-    border-radius: 200px;
+    border-radius: 50%;
 }
 
 .section__text {
@@ -203,12 +208,13 @@ section {
     margin-top: 1rem;
     gap: 1rem;
 }
- /* ICONS */
+
+/* ICONS */
+
 .icon {
     cursor: pointer;
     height: 2rem;
  }
-
 
 /* BUTTONS */
 
@@ -229,14 +235,12 @@ section {
 .btn-color-1,
  .btn-color-2 {
     border: rgb(53, 53, 53) 0.1rem solid;
-
 }
 
 .btn-color-1:hover,
  .btn-color-2:hover {
     cursor: pointer;
 }
-
 
 .btn-color-1,
  .btn-color-2:hover {
@@ -259,16 +263,17 @@ section {
 .btn-container {
     gap: 1rem;
 }
+
 /* ABOUT SECTION */
 
 #about {
-   position : relative;
+   position: relative;
 }
 
 .about-containers {
     gap: 2rem;
     margin-bottom: 2rem;
-    margin-top: 2rem
+    margin-top: 2rem;
 }
 
 .about-details-container {
@@ -312,7 +317,6 @@ section {
     margin: auto 0;
 }
 
-
 /* EXPERIENCE SECTION */
 
 #experience {
@@ -325,7 +329,6 @@ section {
     font-size: 1.75rem;
     margin-bottom: 2rem;
 }
-
 
 .experience-details-container {
     display: flex;
@@ -345,7 +348,7 @@ section {
 article {
     display: flex;
     width: 10rem;
-    justify-content: space-around;
+    justify-content: initial;
     gap: 0.5rem;
 }
 
@@ -353,7 +356,7 @@ article .icon {
     cursor: default;
 }
 
-/* PROJECT SECITON */
+/* PROJECTS SECTION */
 
 #projects {
     position: relative;
@@ -383,10 +386,6 @@ article .icon {
 /* CONTACT */
 
 #contact {
-    position: relative;
-}
-
-#contact {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -412,25 +411,24 @@ article .icon {
     margin: 1rem;
 }
 
-.contact-info-container {
+.contact-info-container p {
     font-size: larger;
+    margin: 10px;
 }
 
 .contact-icon-1 {
     cursor: default;
-    height: 3rem;
 }
 
 .contact-icon-2 {
     cursor: default;
-    height: 2.3rem;
 }
 
 /* FOOTER SECTION */
 
 footer {
-    height: 6vh;
-    margin: 0 1rem
+    height: 26vh;
+    margin: 0 1rem;
 }
 
 footer p {
