@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <section class="pyscript">
+        <p>Minimum Length: <input id="min-length" type="number" /></p>
+        <p>Has Numbers: <input id="has-num" type="checkbox" /></p>
+        <p>Has Special Characters: <input id="has-special" type="checkbox" /></p>
+        <button type="submit" py-click="html_main">
+            Generate
+        </button>
+        <p id="result"></p>
+        <script type="py" src="./main.py"></script>
+    </section>
+</body>
+</html>
