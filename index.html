@@ -9,10 +9,24 @@
     <title>Daniel's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -21,6 +35,7 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#performances">Performances</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -37,6 +52,9 @@
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li>
+            <a href="#performances" onclick="toggleMenu()">Performances</a>
+          </li>
           <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -71,11 +89,18 @@
             class="icon"
             onclick="location.href='https://www.youtube.com/@danielswonderland6783'"
           />
+
           <img
             src="./assets/github.png"
-            alt="my github channel"
+            alt="my github account"
             class="icon"
             onclick="location.href='https://github.com/DSL10git'"
+          />
+          <img
+            src="./assets/coddy.svg"
+            alt="my coddy profile"
+            class="icon"
+            onclick="location.href='https://coddy.tech/user/SeRst4ccSIhMZfxleAXpdLs4n4q1'"
           />
         </div>
       </div>
@@ -117,8 +142,8 @@
           </div>
           <div class="text-container">
             <p>
-              My name is Daniel and I'm 8 1/2 years old. I go to Holly Avenue
-              Elementary school and My favorite color is blue
+              My name is Daniel, and I'm 8 1/2 years old. My favorite color is
+              blue. My favorite fruite is kiwi, mango, and watermelon.
             </p>
           </div>
         </div>
@@ -239,9 +264,70 @@
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
+        onclick="location.href='./#performances'"
+      />
+    </section>
+
+    <section id="performances">
+      <p class="section__text__p1">Some of my favorite</p>
+      <h1 class="title">Performances</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- VIDEO ONE -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <iframe src="https://www.youtube.com/embed/E-UGfGxsBaE"> </iframe>
+            </div>
+            <h2 class="experience-sub-title project-title">
+              k.545 Sonata Complete
+            </h2>
+            <h4>Description</h4>
+            <p>
+              This is one of my longest videos, it was taken at Colburn and was
+              taken by my mom, I ranked at #1 because it has the least mistakes
+              and becauese it is the longest.
+            </p>
+          </div>
+
+          <!-- Video TWO -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <iframe src="https://www.youtube.com/embed/fp5qTSd-8BU"> </iframe>
+            </div>
+            <h2 class="experience-sub-title project-title">Solfeggietto</h2>
+            <h4>Description</h4>
+            <p>
+              This video was uploaded on first day of Decemeber. My mom took
+              this video and I rate it #3, it has some errors but it is fast and
+              exciting.
+            </p>
+          </div>
+
+          <!-- VIDEO THREE -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <iframe src="https://www.youtube.com/embed/CPNTtSwl3uo"> </iframe>
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Sonatina Op 36 No.4 Complete
+            </h2>
+            <h4>Description</h4>
+            <p>
+              This video was taken at Colburn. This performance was for intro to
+              chamber music auditioning. I rate this #2 beacause it got into
+              chamber music and it sounded beautiful.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
         onclick="location.href='./#projects'"
       />
     </section>
+
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -310,7 +396,9 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Simple Calculator</h2>
+            <h2 class="experience-sub-title project-title">
+              Simple Calculator
+            </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -367,6 +455,7 @@
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#performances">Performances</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
