@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="slider.css" />
+    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="./assets/favicon/apple-touch-icon.png"
@@ -292,14 +297,15 @@
           <!-- Video TWO -->
           <div class="details-container color-container">
             <div class="article-container">
-              <iframe src="https://www.youtube.com/embed/fp5qTSd-8BU"> </iframe>
+              <iframe src="https://www.youtube.com/embed/OpAh6RKyNgs"> </iframe>
             </div>
-            <h2 class="experience-sub-title project-title">Solfeggietto</h2>
+            <h2 class="experience-sub-title project-title">
+              Visiting senior home during Christmas season on 2024
+            </h2>
             <h4>Description</h4>
             <p>
-              This video was uploaded on first day of Decemeber. My mom took
-              this video and I rate it #3, it has some errors but it is fast and
-              exciting.
+              Around December 7 - 9th, I participated a heartwarming and
+              meaningful activity, visiting a senior home!
             </p>
           </div>
 
@@ -318,12 +324,6 @@
               chamber music and it sounded beautiful.
             </p>
           </div>
-          <h3>Ratings</h3>
-          <ol>
-            <li>#1: k.545 Sonata Complete🏆</li>
-            <li>#2: Sonatina Op 36 No.4 Complete🥈</li>
-            <li>#3: Solfeggietto🥉</li>
-          </ol>
         </div>
       </div>
       <img
@@ -332,6 +332,48 @@
         class="icon arrow"
         onclick="location.href='./#projects'"
       />
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <p>More performances</p>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img">
+              <iframe src="https://www.youtube.com/embed/E-UGfGxsBaE"> </iframe>
+            </div>
+            <h2>k.545 Sonata Complete</h2>
+            <span></span>
+          </li>
+          <li class="card">
+            <div class="img">
+              <iframe src="https://www.youtube.com/embed/8yo0RNbPfNc"> </iframe>
+            </div>
+            <h2>Doctor Gradus ad Parnassum</h2>
+            <span></span>
+          </li>
+          <li class="card">
+            <div class="img">
+              <iframe src="https://www.youtube.com/embed/OpAh6RKyNgs"> </iframe>
+            </div>
+            <h2>Visiting senior home during holidays</h2>
+            <span></span>
+          </li>
+          <li class="card">
+            <div class="img">
+              <iframe src="https://www.youtube.com/embed/deSapueY8HM"> </iframe>
+            </div>
+            <h2>Solfeggietto C.P.E Bach Version II</h2>
+            <span></span>
+          </li>
+          <li class="card">
+            <div class="img">
+              <iframe src="https://www.youtube.com/embed/knnKyIbXPpU"> </iframe>
+            </div>
+            <h2>Invention 4 BWV 775</h2>
+            <span></span>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
     </section>
 
     <section id="projects">
@@ -481,6 +523,7 @@
         </div>
       </div>
     </section>
+
     <footer>
       <nav>
         <div class="nav-links-container">
@@ -496,5 +539,6 @@
       <p>Copyright &#169; 2024 Daniel Liao. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="slider.js"></script>
   </body>
 </html>

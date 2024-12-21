@@ -1,0 +1,145 @@
+/* Write CSS code here */
+/* * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+/* .wrapper {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    padding: 0px;
+    padding-left: 35px;
+    padding-right: 35px;
+    min-height: 100vh;
+    background: linear-gradient(to left top, rgb(10, 145, 242), rgb(255, 20, 98));
+
+} */
+
+.experience-details-container i {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    transition: transform 0.1s linear;
+    }
+
+.experience-details-container i:active {
+    transform: translateY(-50%) scale(0.85);
+    }
+
+.wrapper i {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    transition: transform 0.1s linear;
+    }
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+#left{
+    left: -22px;
+}
+
+#right{
+    right: -22px;
+}
+
+.carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 10px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel .card,
+.carousel .img
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    scroll-snap-align: start;
+    height: 200px;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.img {
+    background: rgba(255, 255, 255, 0.1);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.img iframe {
+    height: 150px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 8%;
+    border: 1px none rgb(255, 255, 255);
+}
+
+li h2 {
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+span {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 18px;
+}

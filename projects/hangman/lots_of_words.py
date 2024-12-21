@@ -1,0 +1,10 @@
+words = ("apple", "house", "smile", "light", "cloud", "dream", "heart", "happy", "water", "green",
+"peace", "music", "lucky", "world", "faith", "truth", "power", "dance", "ocean", "magic",
+"grace", "smart", "shine", "laugh", "quick", "brave", "sweet", "movie", "plant", "stone",
+"beauty", "trust", "earth", "loved", "think", "clear", "royal", "coast", "sharp", "space",
+"flash", "bread", "joint", "style", "begin", "grand", "voice", "super", "class", "order",
+"float", "title", "catch", "prime", "blend", "north", "south", "bliss", "limit", "storm","flower",
+"energy", "simple", "forest", "island", "friend", "silver", "strong", "travel", "family",
+"honest", "spirit", "kindle", "bright", "singer", "global", "future", "nature", "winner", "honor",
+"vision", "leader", "health", "action", "famous", "cheese", "wonder", "pretty", "memory", "change",
+"smiley", "bubble", "yellow", "splash", "silent", "rocket", "joyful", "secure", "wealth", "circle", "hangman")
