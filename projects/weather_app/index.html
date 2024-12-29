@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- PyScript CSS -->
+    <link
+      rel="stylesheet"
+      href="https://pyscript.net/releases/2024.3.1/core.css"
+    />
+    <!-- This script tag bootstraps PyScript -->
+    <script
+      type="module"
+      src="https://pyscript.net/releases/2024.3.1/core.js"
+    ></script>
+    <py-config> packages = ["requests", "urllib3"] </py-config>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+      body {
+        background-image: url("sunny_day.webp");
+        background-size: cover; /* Ensures the image covers the entire viewport */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position: center; /* Centers the image */
+        font-family: Arial, sans-serif; /* Optional styling */
+        margin: 0; /* Removes default margins */
+        padding: 0; /* Removes default padding */
+      }
+      input[type="text"] {
+        width: 200px;
+        padding: 5px;
+        margin: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 15px;
+        background-color: rgb(255, 255, 0, 0);
+      }
+      .button_top {
+        border-radius: 15px;
+        margin-right: 50%;
+        background-color: rgb(255, 255, 0, 0);
+      }
+      .place_label {
+        background-color: rgb(255, 255, 0, 0);
+      }
+      .pick-temp {
+        background-color: rgb(255, 255, 0, 0);
+      }
+      .popup {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+      }
+
+      .popup-content {
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888888;
+        width: 30%;
+        font-weight: bolder;
+      }
+
+      .popup-content button {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .show {
+        display: block;
+      }
+      .pop-title {
+        color: lightblue;
+        text-shadow: 2px 2px black;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .emoji {
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton" class="button_top" type="submit">
+      <strong>About</strong>
+    </button>
+    <div id="myPopup" class="popup">
+      <div class="popup-content">
+        <h1 class="pop-title">Weather App</h1>
+        <p>
+          1. place Input <br>
+          You can type the name of any place in a text
+          input box to fetch its weather information.
+          <br>
+          2. Unit Selection <br>       
+          This app allows you to view the temperature in Celsius, Fahrenheit, or Kelvin using radio buttons.  
+          <br>                
+          3. Weather Information <br>
+          Displays:
+              Temperature in the selected unit.
+              Weather Description (e.g., sunny, cloudy, rainy, etc.).
+              emoji-based weather icons.
+          <br>                  
+          4. Error Handling <br>    
+          Handles common API and connection errors, such as:
+              City not found
+              Invalid API key
+              Server errors
+              Internet connectivity issues
+              Displays user-friendly error messages for each type of error.
+          <br>       
+          5. Responsive Design <br>
+          The app dynamically adjusts the position of elements like the "About the Website" button based on the size of the window.
+          <br>
+
+          <strong>How To Use</strong> <br>
+          Type in a zip code (e.g 12345), contry(e.g Russia), county(e.g Los angles), city(e.g Unalaska), and ect <br> 
+          It will give you the temperature(You can pick between K(Kelvin), F(fahrenheit), or C(celsius) KFC!), rain and ect, and weather emoji. <br>
+          If you click Show more it will give you the wind (You can pick between Mph or Km/h), what it feels like, and place(road, city, county, state, zip code, and contry)!                                  
+        </p>
+        <button id="closePopup">Close</button>
+      </div>
+    </div>
+    <h1>Weather App</h1>
+    <label id="place_label" for="place">Enter a place:</label>
+    <br />
+    <input id="place" class="place_label" type="text"/>
+    <br />
+    <button type="submit" py-click="display_weather">
+      <strong>Get Weather</strong>
+    </button>
+    <h3>Temperature Units:</h3>
+    <input
+      type="radio"
+      id="fahrenheit"
+      name="temperature"
+      value="Fahrenheit"
+      checked
+    />
+    <label for="fahrenheit" class="pick-temp">Fahrenheit</label>
+    <input
+      type="radio"
+      class="pick-temp"
+      id="celsius"
+      name="temperature"
+      value="Celsius"
+    />
+    <label for="celsius">Celsius</label>
+    <input
+      type="radio"
+      class="pick-temp"
+      id="kelvin"
+      name="temperature"
+      value="Kelvin"
+    />
+    <label for="kelvin">Kelvin</label>
+    <br />
+    <p id="temperature" class="bold"></p>
+    <p id="emoji" class="emoji"></p>
+    <p id="description" class="bold"></p>
+    <section id="more_section" hidden>
+      <h3>Wind Speed Units:</h3>
+      <input type="radio" id="mph" name="speed" value="mph" checked />
+      <label for="mph" class="pick-temp">mph</label>
+      <input type="radio" class="pick-temp" id="kmh" name="speed" value="kmh" />
+      <label for="kmh">km/h</label>
+      <p id="more" class="bold"></p>
+      <p id="address" class="bold"></p>
+    </section>
+    <button type="submit" py-click="display_more">
+      <strong id="more_text">Show More</strong>
+    </button>
+    <script type="py" src="./main.py"></script>
+    <script>
+      myButton.addEventListener(
+          "click",
+          function () {
+              myPopup.classList.add("show");
+          }
+      );
+      closePopup.addEventListener(
+          "click",
+          function () {
+              myPopup.classList.remove(
+                  "show"
+              );
+          }
+      );
+      window.addEventListener(
+          "click",
+          function (event) {
+              if (event.target == myPopup) {
+                  myPopup.classList.remove(
+                      "show"
+                  );
+              }
+          }
+      );
+    </script>
+  </body>
+</html>

@@ -96,7 +96,7 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: white;
+    background-color: rgba(0, 0 0, 0);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
@@ -274,6 +274,7 @@ section {
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .about-details-container {
