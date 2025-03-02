@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Dad!</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        flex-direction: column;
+        transition: background-color 2s ease-in-out;
+      }
+
+      .intro {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
+        color: white;
+        text-shadow: 3px 3px 8px black;
+        font-weight: bold;
+        animation: bounce 1s infinite alternate ease-in-out;
+      }
+      /* Footer text */
+      p {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font: 16px Verdana, sans-serif;
+        color: #eee;
+        text-shadow: 0 0 2px white;
+        z-index: 10; /* Ensures text is above canvas */
+      }
+
+      /* Links */
+      p a {
+        text-decoration: none;
+        color: #aaa;
+      }
+
+      @keyframes bounce {
+        from {
+          transform: translateX(-50%) translateY(0);
+        }
+        to {
+          transform: translateX(-50%) translateY(-10px);
+        }
+      }
+
+      @keyframes moving-gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .buttons {
+        margin-top: 20px;
+      }
+
+      .surprise-btn {
+        margin: 10px;
+        padding: 12px 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background-color: #ff4081;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .surprise-btn:hover {
+        background-color: #e91e63;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        filter: blur(20px);
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      /* Hamburger Menu */
+      .menu-container {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+
+      .hamburger {
+        font-size: 30px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: white;
+      }
+
+      .dropdown {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        right: 0;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .dropdown button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background: none;
+        text-align: left;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .dropdown button:hover {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-container">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <div class="dropdown" id="dropdownMenu">
+        <button onclick="setEffect('bounce')">Bouncing Title</button>
+        <button onclick="setEffect('gradient')">Moving Gradient</button>
+        <button onclick="setEffect('fade')">Fading Colors</button>
+      </div>
+    </div>
+
+    <h1 class="intro">Happy Birthday Dad! 🎂🎉</h1>
+    <p>
+      <a href="info.html" target="_blank">Created</a>
+      by <a href="https://dsl10git.github.io/" target="_blank">Daniel Liao</a>
+    </p>
+    <div class="buttons">
+      <button class="surprise-btn" onclick="location.href='index.html'">
+        Surprise 1
+      </button>
+      <button class="surprise-btn" onclick="location.href='index2.html'">
+        Surprise 2
+      </button>
+    </div>
+
+    <script>
+      const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+      let index = 0;
+      let effect = "fade";
+      let interval = setInterval(changeBackground, 2000);
+
+      function toggleMenu() {
+        let dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
+      }
+
+      function setEffect(selectedEffect) {
+        effect = selectedEffect;
+        clearInterval(interval);
+
+        if (effect === "gradient") {
+          document.body.style.animation = "moving-gradient 10s ease infinite";
+          document.body.style.background =
+            "linear-gradient(270deg, red, orange, yellow, green, blue, purple)";
+          document.body.style.backgroundSize = "400% 400%";
+        } else if (effect === "fade") {
+          document.body.style.animation = "none";
+          interval = setInterval(changeBackground, 2000);
+        } else if (effect === "bounce") {
+          document.body.style.animation = "none";
+          document.querySelector(".intro").style.animation =
+            "bounce 1s infinite alternate ease-in-out";
+        }
+      }
+
+      function changeBackground() {
+        if (effect === "fade") {
+          document.body.style.transition = "background-color 1.5s ease-in-out";
+          document.body.style.backgroundColor = colors[index];
+          index = (index + 1) % colors.length;
+        }
+      }
+    </script>
+  </body>
+</html>
