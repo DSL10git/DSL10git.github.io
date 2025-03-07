@@ -59,14 +59,10 @@ def check_inputs(operator, num1, num2, round_digits):
 
     """
     operators = ('+', '-', '/', '^', '*', '%')
-    check_operator_passed = True
-    check_num1_passed = True
-    check_num2_passed = True
-    check_round_digits_passed = True
     error_message = None
     if operator not in operators:
         error_message = f"Invalid operator"
-        check_operator_passed = False
+        return False, error_message
     
     try:
         float(num1)
@@ -80,7 +76,7 @@ def check_inputs(operator, num1, num2, round_digits):
         error_message = "Invalid second number"
         return False, error_message
 
-    if num2 == 0 and operator == "/":
+    if float(num2) == 0 and operator == "/":
         error_message = f"The second number cannot be zero when dividing"
         return False, error_message
 
