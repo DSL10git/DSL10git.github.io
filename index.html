@@ -76,7 +76,31 @@
     </style>
     <button class="event" onclick="showHint()">Event - Can you find the Special button?</button>
     <p id="hint">Hint - The button looks like this "???"</p>
-
+    <style>
+      .daniel_birthday {
+        position: absolute;
+      left: 1000px;
+      border: 2px solid black; /* Black border */
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, lightskyblue, lightblue); /* Gradient background */
+    color: black; /* Text color */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: Rounded corners */
+      }
+      .daniel_birthday_text {
+        position: absolute;
+      left: 1050px;
+      top: 120px;
+      padding: 10px 20px;
+      color: black; /* Text color */
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px; /* Optional: Rounded corners */
+      }
+    </style>
+    <h5 class="daniel_birthday_text">Today is my <a href="projects/daniel_birthday/info.html">birthday!</a></h5>
+    <button class="daniel_birthday" onclick="location.href='projects/daniel_birthday/main.html'">Happy Birthday!🎂🥳🎉Happy Birthday!</button>
     <script>
         function showHint() {
             document.getElementById("hint").style.display = "block"; // Show the hint
@@ -472,6 +496,20 @@
           <!-- PDF -->
           <iframe src="certificate_images/chart.pdf" class="certificate-pdf"></iframe>
       </div>
+      <div class="certificate-text">
+        <p>I got 3rd place!!!</p> 
+    </div>
+      <!-- Video and PDF Wrapper -->
+      <div class="video-pdf-container">
+        <!-- Video -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/uQ0MvPpvgy0" class="certificate-video"></iframe>
+            <h2>Sonata No.16 in C Major,K.545</h2>
+        </div>
+
+        <!-- PDF -->
+        <iframe src="certificate_images/diploma.pdf" class="certificate-pdf"></iframe>
+    </div>
   </div>
         <div class="slider-container">
           <div class="slider">
@@ -702,6 +740,7 @@
               />
             </div>
             <h2 class="experience-sub-title project-title">Weather App</h2>
+            <button class = "secret_button" onclick="location.href='secret.html'">???</button>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -799,7 +838,7 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <button class = "secret_button" onclick="location.href='secret.html'">???</button>
+
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experiences</a></li>
             <li><a href="#certificates">Certificates</li>
